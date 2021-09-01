@@ -42,6 +42,9 @@ namespace kingdom
             
             services.AddScoped<AccountsRepository>();
             services.AddScoped<AccountService>();
+            // NOTE: added my transients here v 
+            services.AddTransient<CastlesService>();
+            services.AddTransient<CastlesRepository>();
         }
 
         private void ConfigureCors(IServiceCollection services)
