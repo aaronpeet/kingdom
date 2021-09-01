@@ -23,8 +23,8 @@ namespace kingdom.Controllers
         try
         {
             IEnumerable<Castle> castles = _castlesService.Get();
-            return Ok(castles) 
-        }
+                return Ok(castles);
+            }
         catch (Exception error)
         {
             
@@ -42,9 +42,9 @@ namespace kingdom.Controllers
         }
         catch (Exception error)
         {
-            
-            return BadRequest(error.Message)
-        }
+
+                return BadRequest(error.Message);
+            }
     }
 
     [HttpPost]
@@ -57,9 +57,9 @@ namespace kingdom.Controllers
         }
         catch (Exception error)
         {
-            
-            return BadRequest(error.Message)
-        }
+
+                return BadRequest(error.Message);
+            }
     }
 
     }

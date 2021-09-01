@@ -17,7 +17,7 @@ namespace kingdom.Models
             }
             set
             {
-                _detroyed = value;
+                _destroyed = value;
                 DestroyedWasSet = true;
             }
         }

@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
-using artistapi.Models;
-using artistapi.Repositories;
+using kingdom.Models;
+using kingdom.Repositories;
 
 namespace kingdom.Services
 {
+    public class CastlesService
+    {
+
     public readonly CastlesRepository _repo;
 
     public CastlesService(CastlesRepository repo)
@@ -22,8 +25,8 @@ namespace kingdom.Services
         Castle castle = _repo.Get(id);
         if(castle == null)
         {
-            throw new Exception("Invalid ID")
-        }
+                throw new Exception("Invalid ID");
+            }
         return castle;
     }
 
@@ -35,5 +38,6 @@ namespace kingdom.Services
             throw new Exception("Invalid ID");
         }
         return castle;
+    }
     }
 }
